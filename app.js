@@ -152,3 +152,5 @@ function clearElement(element) {
 }
 
 render();
+
+console.log("trying github");
