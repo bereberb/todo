@@ -10,11 +10,22 @@
       href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <script defer src="/todo/app.js"></script>
   </head>
-  <body>
+  <body class="">
     <h1 class="title">Vanilla to do</h1>
-
+    <div class="theme-icon">
+      <h2 class="theme-text">TOGGLE MODE</h2>
+      <i
+        id="icon-dark"
+        class="fa fa-adjust dark-icon"
+        style="font-size: 3rem"
+      ></i>
+    </div>
     <div class="all-tasks">
       <h2 class="task-list-title">My List</h2>
       <ul class="task-list" data-lists></ul>

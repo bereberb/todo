@@ -14,6 +14,8 @@ const newTaskInput = document.querySelector("[data-new-task-input]");
 const clearCompleteTasksButton = document.querySelector(
   "[data-clear-complete-tasks-button]"
 );
+const darkIcon = document.getElementById("icon-dark");
+darkIcon.addEventListener("click", console.log("clicked"));
 
 const LOCAL_STORAGE_LIST_KEY = "task.lists";
 const LOCAL_STORAGE_SELECTED_LIST_ID_KEY = "task.selectedListId";

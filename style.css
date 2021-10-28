@@ -5,6 +5,20 @@
   --clr-warning: rgb(99, 36, 36);
 }
 
+/* :root {
+  --clr-primary: rgb(54, 112, 199);
+  --clr-light: #f4f4f4;
+  --clr-dark: #333;
+  --clr-warning: rgb(99, 36, 36);
+} */
+
+.dark-mode {
+  --clr-primary: #333;
+  --clr-light: #f4f4f4;
+  --clr-dark: rgb(54, 112, 199);
+  --clr-warning: rgb(99, 36, 36);
+}
+
 *,
 *::after,
 *::before {
@@ -27,6 +41,12 @@ body {
     1fr minmax(100px, 300px) minmax(250px, 500px) 1fr;
 }
 
+/* p,
+h2,
+label {
+  color: black;
+} */
+
 .title {
   grid-area: header;
   text-align: center;
@@ -35,6 +55,30 @@ body {
   color: rgb(0, 0, 0, 0.1);
   letter-spacing: 2px;
   margin: -0.3em 0 0.5em;
+}
+
+.theme-icon {
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem;
+  position: absolute;
+  right: 0;
+  color: var(--clr-light);
+}
+
+.theme-text {
+  margin: 0 1em 0 0;
+  padding: var(--spacer);
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: var(--clr-light);
+}
+
+.dark-icon {
+  cursor: pointer;
+  color: var(--clr-light);
 }
 
 .all-tasks {

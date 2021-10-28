@@ -14,11 +14,33 @@ const newTaskInput = document.querySelector("[data-new-task-input]");
 const clearCompleteTasksButton = document.querySelector(
   "[data-clear-complete-tasks-button]"
 );
+const darkIcon = document.querySelector("#icon-dark");
 
 const LOCAL_STORAGE_LIST_KEY = "task.lists";
 const LOCAL_STORAGE_SELECTED_LIST_ID_KEY = "task.selectedListId";
 let lists = JSON.parse(localStorage.getItem(LOCAL_STORAGE_LIST_KEY)) || [];
 let selectedListId = localStorage.getItem(LOCAL_STORAGE_SELECTED_LIST_ID_KEY);
+let darkMode = localStorage.getItem("theme.mode");
+
+const enableDarkMode = () => {
+  document.body.classList.add("dark-mode");
+  localStorage.setItem("theme.mode", "enabled");
+};
+
+const disableDarkMode = () => {
+  document.body.classList.remove("dark-mode");
+  localStorage.setItem("theme.mode", null);
+};
+
+darkIcon.addEventListener("click", () => {
+  darkMode = localStorage.getItem("theme.mode");
+  if (darkMode !== "enabled") {
+    enableDarkMode();
+    console;
+  } else {
+    disableDarkMode();
+  }
+});
 
 listsContainer.addEventListener("click", (e) => {
   if (e.target.tagName.toLowerCase() === "li") {
